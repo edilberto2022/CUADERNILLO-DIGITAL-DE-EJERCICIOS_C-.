@@ -1,0 +1,75 @@
+Using System; 
+Using System.Linq; 
+Namespace Ejercicio2 
+ 
+{ 
+Public static class Program 
+{ 
+Public static void Main() 
+{ 
+ 
+     /*En una tienda un cliente desea comprar playeras donde  hay 5 modelos de playeras  
+       Con diferente precio en donde el modelo A tiene 
+       Un descuento de 15 %,el modelo B de 10%, modelo C 
+       De 25 %, modelo D de 18%,modelo E de 20% */ 
+       Double t=0,p=0,pcd=0; 
+       Char modelo= ‘ ‘;        
+       //proceso 
+       Console.WriteLine(“Selecciona el modelo:”); 
+       Console.WriteLine(“Modelo A 15% de descuento”); 
+       Console.WriteLine(“Modelo B 10% de descuento “); 
+       Console.WriteLine(“Modelo C 25% de descuento”); 
+       Console.WriteLine(“Modelo D 18% de descuento “); 
+       Console.WriteLine(“Modelo E 20% de descuento”); 
+   Modelo= char.Parse(Console.ReadLine()); 
+ 
+       If (modelo==’A’ || modelo==’a’ || modelo==’B’ || modelo==’b’ || modelo==’C’ || modelo==’c’ || modelo== ‘D’ || modelo==’d’ || modelo== ‘E’ || modelo==’e’) 
+        { 
+         Console.WriteLine(“ingresa el precio: “); 
+         P=double.Parse(Console.ReadLine()); 
+         If (p<0) 
+         { 
+         Console.WriteLine(“Verificar el precio”); 
+         } 
+         Else  
+         If (p>=1) 
+         { 
+        Switch (modelo) 
+        { 
+       Case ‘A’: 
+       Case ‘a’: 
+       Pcd= p*0.15; 
+       T=p-pcd; 
+       Break; 
+       Case ‘B’: 
+       Case ‘b’: 
+       Pcd=p*0.10; 
+       T=p-pcd; 
+       Break; 
+       Case ‘C’: 
+       Case ‘c’: 
+       Pcd=p*0.25; 
+       T=p-pcd; 
+       Break; 
+       Case ‘D’: 
+       Case ‘d’: 
+       Pcd=p*0.18; 
+       T=p-pcd; 
+       Break; 
+       Case ‘E’: 
+       Case ‘e’: 
+       Pcd=p*0.20; 
+       T=p-pcd; 
+       Break; 
+        } 
+        Console.WriteLine(“El precio con descuento es de  “+ t + “ pesos”); 
+         } 
+        Else 
+        { 
+        Console.WriteLine(“verificar datos”); 
+        } 
+       Console.ReadKey(); 	 
+
+} 
+} 
+} 
