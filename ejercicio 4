@@ -1,0 +1,25 @@
+using System; using System.Linq; namespace EjercicioC 
+{ 
+public static class Program 
+{ 
+public static void Main() 
+{ 
+double p=0,t=0, dcp=0; 
+//descuento de un 25% 
+Console.WriteLine("Cual es el precio del colchon matrimonial");
+p=double.Parse(Console.ReadLine()); 
+// proceso
+if (p<=0) 
+{ 
+    Console.WriteLine("Verificar precio"); 
+} 
+else 
+if (p>=0) 
+{ 
+dcp=p*0.25; 
+t=p-dcp; 
+Console.WriteLine("El precio con descuento es de: "+t +" pesos"); 
+          } 
+} 
+} 
+} 
