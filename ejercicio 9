@@ -1,0 +1,49 @@
+using System; 
+using System.Collections.Generic; using System.Linq; using System.Text; 
+using System.Threading.Tasks; 
+
+namespace Costo_por_inyectar
+{
+    public static class program
+    {
+        static void Main(string[] args)
+        {
+            double tv, tp, d, td, da;
+            td = 0;
+            da = 0;
+
+            Console.WriteLine("¿Cual es el total de vacas a inyectar?");
+            tv = double.Parse(Console.ReadLine());
+
+            if (tv < 20)
+            {
+                td = tv * 40;
+                Console.WriteLine("El total a pagar por las vacas inyectadas es de " + td + " pesos ");
+                Console.WriteLine("No se le aplica descuento");
+                Console.ReadKey();
+            }
+            else
+            {
+                if (tv >= 20 && tv <= 40)
+                {
+                    tp = tv * 40;
+                    d = tp * .5;
+                    td = tp - d;
+                    da = 5;
+                }
+                else
+                if (tv > 40)
+                {
+                    tp = tv * 40;
+                    d = tp * .8;
+                    td = tp - d;
+                    da = 8;
+                }
+
+                Console.WriteLine("El total a pagar por las vacas inyectadas es " + td + " pesos ");
+                Console.WriteLine("Se aplica un descuento del " + da + "%");
+                Console.ReadKey();
+            }
+        }
+    }
+}
